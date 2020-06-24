@@ -26,7 +26,7 @@ function App() {
 
   const handleSubmit = () => {
     setLoader(true)
-    axios.post('http://127.0.0.1:5000/sendmail',{
+    axios.post('https://sendflaskmail20.herokuapp.com/sendmail',{
       data: {
         name: name,
         price: price,
@@ -34,7 +34,7 @@ function App() {
       }
     })
       .then(res => {
-        swal('Your email has been Sent')
+        swal('Your email has been Sent Succesfully')
         setPrice('')
         setName('')
         setEmail('')
@@ -52,11 +52,11 @@ function App() {
     </div>
     <div className="card-body">
       <div className="form-group">
-        <label>Full Name:</label>
+        <label>*Full Name:</label>
         <input type="email" disabled={loader} placeholder="Enter your full name" name="name" onChange={handleNameChange} value={name} className="form-control" id="email" />
       </div>
       <div className="form-group">
-        <label>Price:</label>
+        <label>*Price (ugx):</label>
         <input type="number" disabled={loader} placeholder="Enter your price (shs)" name='price' onChange={handlePriceChange} value={price} className="form-control" id="pwd" />
       </div>
       <div className="form-group">
