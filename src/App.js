@@ -60,8 +60,8 @@ function App() {
         <input type="number" disabled={loader} placeholder="Enter your price (shs)" name='price' onChange={handlePriceChange} value={price} className="form-control" id="pwd" />
       </div>
       <div className="form-group">
-        <label>Email:</label>
-        <input disabled={loader} type="email" placeholder="Enter additional optional Email" name='email' onChange={handleEmailChange} value={email} className="form-control" id="pwd" />
+        <label>Email (optional):</label>
+        <input disabled={loader} type="email" placeholder="Enter your own Email to receive a copy" name='email' onChange={handleEmailChange} value={email} className="form-control" id="pwd" />
       </div>
       <div class="ui active inline loader"></div>
       <button type="submit" disabled={loader} className="btn btn-default" onClick={handleSubmit}>Submit</button>
